@@ -18,8 +18,16 @@ export default class NewBill {
   handleChangeFile = e => {
     e.preventDefault()
     const file = this.document.querySelector(`input[data-testid="file"]`).files[0]
+    var allowedFileExtensions = /(\.jpg|\.jpeg|\.png)$/i;
     const filePath = e.target.value.split(/\\/g)
     const fileName = filePath[filePath.length-1]
+
+    if (!allowedFileExtensions.exec(filePath)) {
+        alert('Type de fichier invalide');
+        fileInput.value = '';
+        return false;
+    }
+
     const formData = new FormData()
     const email = JSON.parse(localStorage.getItem("user")).email
     formData.append('file', file)
