@@ -24,7 +24,7 @@ export default class NewBill {
 
     if (!allowedFileExtensions.exec(filePath)) {
         alert('Type de fichier invalide');
-        fileInput.value = '';
+        this.document.querySelector(`input[data-testid="file"]`).value = '';
         return false;
     }
 
