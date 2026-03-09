@@ -1,94 +1,104 @@
+# Billed — HR SaaS App (Frontend)
 
-## L'architecture du projet :
-Ce projet, dit frontend, est connecté à un service API backend que vous devez aussi lancer en local.
+Debugging and testing a HR web application, as part of a front-end development training program.
 
-Le projet backend se trouve ici: https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-back
+> This is the **frontend** repository. It must be run alongside the [backend repository](https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-Back).
 
-## Organiser son espace de travail :
-Pour une bonne organization, vous pouvez créer un dossier bill-app dans lequel vous allez cloner le projet backend et par la suite, le projet frontend:
+## Project Overview
 
-Clonez le projet backend dans le dossier bill-app :
-```
-$ git clone https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-Back.git
-```
+This project was completed as part of a structured front-end development curriculum. Rather than building from scratch, the goal here was to **debug an existing application** and **write a comprehensive test suite** to ensure its reliability.
+
+Working on a real-world HR SaaS app used to manage expense reports, the work covered fixing identified bugs, writing unit and integration tests in JavaScript, and designing a manual end-to-end test plan for the employee journey.
+
+## Objectives
+
+- Debug the application using Chrome DevTools
+- Write unit tests and integration tests with Jest
+- Design a manual end-to-end test plan
+- Ensure overall reliability and quality of the codebase
+
+## Tech Stack
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Jest](https://img.shields.io/badge/Jest-C21325?style=flat&logo=jest&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+
+## What I Learned
+
+- Debugging a web application systematically using Chrome Debugger
+- Writing unit tests and integration tests with Jest
+- Designing an end-to-end manual test plan
+- Reading and working within an unfamiliar existing codebase
+- Understanding the value of testing in ensuring software quality
+
+## Context
+
+This project is part of the **OpenClassrooms Front-End Developer** curriculum. It introduces testing and debugging as core developer skills, shifting the focus from building new features to ensuring the quality and reliability of existing code.
+
+---
+
+## Project Architecture
+
+This frontend app connects to a local backend API. Both must be running simultaneously.
+
+Recommended folder structure:
 
 ```
 bill-app/
-   - Billed-app-FR-Back
+   ├── Billed-app-FR-Back
+   └── Billed-app-FR-Front
 ```
 
-Clonez le projet frontend dans le dossier bill-app :
-```
-$ git clone https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-Front.git
-```
+## Getting Started
 
-```
-bill-app/
-   - Billed-app-FR-Back
-   - Billed-app-FR-Front
-```
+### 1. Set up the backend
 
-## Comment lancer l'application en local ?
+Clone and run the backend first — follow the instructions in the [backend repository](https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-Back).
 
-### étape 1 - Lancer le backend :
+### 2. Set up the frontend
 
-Suivez les indications dans le README du projet backend.
+Clone the repository into your `bill-app` folder:
 
-### étape 2 - Lancer le frontend :
-
-Allez au repo cloné :
-```
-$ cd Billed-app-FR-Front
+```bash
+git clone https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-Front.git
+cd Billed-app-FR-Front
 ```
 
-Installez les packages npm (décrits dans `package.json`) :
-```
-$ npm install
-```
+Install dependencies:
 
-Installez live-server pour lancer un serveur local :
-```
-$ npm install -g live-server
+```bash
+npm install
 ```
 
-Lancez l'application :
-```
-$ live-server
-```
+Install and run live-server:
 
-Puis allez à l'adresse : `http://127.0.0.1:8080/`
-
-
-## Comment lancer tous les tests en local avec Jest ?
-
-```
-$ npm run test
+```bash
+npm install -g live-server
+live-server
 ```
 
-## Comment lancer un seul test ?
+The app is available at: `http://127.0.0.1:8080/`
 
-Installez jest-cli :
+## Running Tests
 
+Run the full test suite:
+
+```bash
+npm run test
 ```
-$npm i -g jest-cli
-$jest src/__tests__/your_test_file.js
+
+Run a single test file:
+
+```bash
+npm i -g jest-cli
+jest src/__tests__/your_test_file.js
 ```
 
-## Comment voir la couverture de test ?
+View test coverage report: `http://127.0.0.1:8080/coverage/lcov-report/`
 
-`http://127.0.0.1:8080/coverage/lcov-report/`
+## Test Accounts
 
-## Comptes et utilisateurs :
-
-Vous pouvez vous connecter en utilisant les comptes:
-
-### administrateur : 
-```
-utilisateur : admin@test.tld 
-mot de passe : admin
-```
-### employé :
-```
-utilisateur : employee@test.tld
-mot de passe : employee
-```
+| Role | Email | Password |
+|---|---|---|
+| Admin | admin@test.tld | admin |
+| Employee | employee@test.tld | employee |
