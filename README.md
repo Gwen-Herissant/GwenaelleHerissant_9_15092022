@@ -31,6 +31,10 @@ Working on a real-world HR SaaS app used to manage expense reports, the work cov
 - Reading and working within an unfamiliar existing codebase
 - Understanding the value of testing in ensuring software quality
 
+## Documentation
+ 
+- 📋 [Manual End-to-End Test Plan](docs/e2e-employee-test-plan.pdf)
+
 ## Context
 
 This project is part of the **OpenClassrooms Front-End Developer** curriculum. It introduces testing and debugging as core developer skills, shifting the focus from building new features to ensuring the quality and reliability of existing code.
